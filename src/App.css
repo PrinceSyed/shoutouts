@@ -1,0 +1,83 @@
+
+
+/* General Styles  */
+
+@media (min-width: 1200px) {
+.container {
+  max-width: 960px;
+}
+}
+/* General Styles  */
+
+body {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 1em;
+}
+
+h1, h2, h3, h4, h5 {
+  font-family: 'Montserrat', sans-serif;
+}
+
+h2 {
+  font-size: 2em;
+}
+
+
+h3 {
+  font-size: 1.6em;
+}
+
+.wrapper {
+  background: url('./assets/img/body-graphic.png') no-repeat;
+  background-position: 0px 500px;
+}
+
+
+
+p.logoWrap {
+  text-align: center;
+  padding-top: 15px;
+}
+
+p.logoWrap img {
+  max-width: 200px;
+}
+
+/* Banner Styles  */
+
+.banner {
+  position: relative;
+  background: url('./assets/img/banner-bg.jpg') center no-repeat;
+  background-size: cover;
+  padding-bottom: 30px;
+}
+
+.banner h1, .banner h2, .banner h3 {
+  color: #fff;
+  text-align: center;
+  font-weight: 300;
+}
+
+
+/* Banner Styles End */
+
+
+
+/* Footer Styles Begins */
+
+ .footer {
+  text-align: center;
+  background: #eeeeee7a;
+  margin-top: 100px;
+  padding: 20px 0px 10px 0px;
+}
+
+
+/* // Small devices (landscape phones, 576px and up)
+@media (min-width: 576px) { ... }
+
+// Medium devices (tablets, 768px and up)
+@media (min-width: 768px) { ... }
+
+// Large devices (desktops, 992px and up)
+@media (min-width: 992px) { ... } */

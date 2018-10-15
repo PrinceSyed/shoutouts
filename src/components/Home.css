@@ -1,0 +1,112 @@
+@media (min-width: 768px) {
+    .banner.banner-home {
+      min-height: 280px;
+    }
+    }
+    
+    .banner.banner-home h2 span {
+      font-weight: 700;
+    }
+
+/* Form Styles  */
+
+.form-container {
+    background-color: #fff;
+    box-shadow: 0 4px 8px 2px rgba(0,0,0,0.13);
+    padding: 3% 10% 6% 10%;
+  }
+  
+  .home-form input[type=text], textarea {
+    border: 0;
+    border-bottom: 1px solid #7B1FA2;
+    outline: none;
+    border-radius: 0;
+  }
+  
+  .home-form input[type=text]:focus, textarea:focus {
+    border: none;
+    border-bottom: 1px solid #7B1FA2;
+    outline: none;
+    box-shadow: none;
+  }
+  
+  .home-form label {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 20px;
+  color: #7B1FA2;
+  font-weight: 500;
+  }
+  
+  .home-form button.btn.btn-main {
+    display: block;
+    margin: 0 auto;
+    margin-top: 45px;
+  }
+  
+  button.btn.btn-main {
+    background: #7B1FA2;
+    border-radius: 20px;
+    color: #fff;
+    padding: 15px 70px;
+    border-radius: 30px;
+  }
+
+  button.btn.btn-main a {
+    color: #fff;
+    text-decoration: none;
+  }
+  
+  @media (min-width: 768px) { 
+  .home.home-form {
+    margin-top: -75px;
+    position: relative;
+    z-index: 1000;
+  }
+  }
+  
+  
+  /* Form Styles  End */
+    
+/* Slack Section Styles  */
+
+.join-slack {
+    margin-top: 60px;
+  }
+  
+  .slack-container {
+    background-color: #fff;
+    box-shadow: 0 4px 8px 2px rgba(0,0,0,0.13);
+    padding: 30px;
+  }
+  
+  @media (min-width: 576px) { 
+    .slack-container {
+       border-radius: 100px;
+       margin-top: 100px;
+       padding: 1.5% 1% 1% 10%;
+      }
+     }
+    
+  
+  .slack-container p {
+    margin-bottom: 5px;
+  }
+  
+  .slack-container p a {
+    color: #7B1FA2;
+    font-size: 1.1em;
+  }
+  
+  
+   img.slack-img {
+     margin: 10px 10px 0px -15px;
+   }
+  
+   @media (min-width: 576px) {
+  img.slack-img {
+    margin: 14px 0px 0px -30px;
+  }
+  }
+  
+  /* Slack Section Styles Ends */
+  

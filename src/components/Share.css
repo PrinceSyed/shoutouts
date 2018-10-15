@@ -1,0 +1,130 @@
+
+
+.share-wrapper {
+    background: url('../assets/img/share-bg.jpg') no-repeat;
+    background-position: 0px 0px;  
+    background-size: cover;
+}
+
+/* Share Banner Component Styles */
+
+.banner-share p {
+    color: #fff;
+    text-align: center;
+    font-weight: 300;
+    font-size: 14px;
+}
+
+.banner-share h2 {
+    margin-bottom: 0px;
+}
+
+.banner-share h3 {
+    font-size: 1.3em;
+    margin-top: 10px;
+    font-weight: 300;
+}
+
+.share-link-group {
+    margin-top: 20px;
+}
+
+.share-link-group label {
+    position: absolute;
+    right: 18px;
+    top: 11px;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.share-link-group input {
+    text-align: center;
+    padding: 22px 0px;
+}
+
+.share-link-group input:focus {
+    outline: none;
+    box-shadow: none;
+}
+
+
+.social-share ul {
+text-align: center;
+margin-top: 10px;
+}
+
+.social-share ul li {
+    display: inline-block;
+}
+
+.social-share ul li img {
+    max-width: 75%;
+}
+
+/* Share Banner Component End */
+
+/* Share Message Component */
+
+.share-message {
+    margin-top: 55px;
+}
+
+.share-message-container{
+    background: #fff;
+    box-shadow: 5px 5px 26px 0 rgba(0,0,0,0.12);
+    border: 1px solid #7B1FA2;
+    border-left: 1px solid #AF3B632;
+    border-bottom: 1px solid #D95130;
+    border-right: 1px solid #A5356E;
+    margin-bottom: 15px;
+}
+
+.share-message-inner {
+    padding: 10%;
+}
+
+.share-message-inner p {
+    font-size: 2em;
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+   
+}
+
+.share-message-inner p span {
+    font-weight: 700;
+}
+
+.share-message-inner p span.userName {
+    color: #EC5A1C;
+}
+
+.share-message-inner p span.recieverName {
+    color: #EC5A1C;
+}
+
+.share-message-inner p span.messsage {
+    font-weight: 400;
+    color: #198A8B;
+    font-size: 1.5em;
+}
+
+.return-favor {
+    display: block;
+    margin: 0 auto;
+    margin-top: 25px;
+}
+
+.btn-ghost {
+    background: none;
+    border-radius: 20px;
+    border: 1px solid #7B1FA2;
+    color: #7B1FA2;
+    padding: 15px 70px;
+    border-radius: 30px;
+}
+
+.btn-ghost:hover {
+    background: none;
+    color: #7B1FA2;
+}
+
