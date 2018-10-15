@@ -13,3 +13,9 @@ Development Tasks
   - Generate unique URL when user clicks on “Generate Link” and save it in firebase
 
   - Incorporate emojis with draft js
+
+Helpful Resources 
+
+  - Firebase Anonymous Authentication - https://www.youtube.com/watch?v=ApG8L2RKrSI
+  - Emojis with draft js  - https://www.draft-js-plugins.com/plugin/emoji
+  
