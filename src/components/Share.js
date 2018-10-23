@@ -7,9 +7,38 @@ import twitterIcon from '../assets/img/twitter-icon.svg';
 import { Container, Row, Col, Button, Form, FormGroup, Label, Input, FormFeedback, FormText } from 'reactstrap';
 import './Share.css';
 import { Link } from 'react-router-dom'
+import axios from 'axios';
 
 
 class Share extends Component {
+    constructor(props) {
+        super(props);
+        this.state = {
+          userName:'',
+          recieverName:'',
+          messsage:'',
+          id:'',
+          shareLink: ''
+        };
+    }
+    componentDidMount() {
+        this.getUser();
+    }
+    getUser(){
+        axios.get('https://shoutouts-3cdba.firebaseapp.com/api/v1/users/'+this.props.match.params.id)
+        .then(res => {
+          //alert(JSON.stringify(res.data.data)); 
+          this.setState({
+            userName: res.data.data.userName,
+            recieverName: res.data.data.recieverName,
+            messsage: res.data.data.messsage,
+            shareLink: 'https://shoutouts-3cdba.firebaseapp.com/share/'+this.props.match.params.id
+          });
+
+        }) .catch(function (error) {
+            alert(JSON.stringify(error));
+        });
+    }
     render() { 
         return ( 
 
@@ -27,7 +56,7 @@ class Share extends Component {
                     <Form>
                         <FormGroup className="share-link-group">
                             <Label for="shareLink"> COPY </Label>
-                            <Input type="text" name="shareLink" id="shareLink" placeholder="https://shoutouts.app/dert123f" />
+                            <Input type="text" name="shareLink" value={this.state.shareLink} id="shareLink" placeholder="https://shoutouts.app/dert123f" />
                         </FormGroup>
                     </Form>
 
@@ -62,11 +91,11 @@ import twitterIcon from '../assets/img/twitter-icon.svg';
                 <Container className="share-message-container">
                     <Row>
                         <Col  className="share-message-inner" sm="12">
-                        <p> <span className="userName"> Jamie </span> 
+                        <p> <span className="userName"> {this.state.userName} </span> 
                         wants to give a shoutout to
-                        <span className="recieverName"> Melissa </span>
+                        <span className="recieverName"> {this.state.recieverName} </span>
                          for 
-                         <span className="messsage"> being an awesome friend </span>
+                         <span className="messsage"> {this.state.messsage} </span>
                          </p>
                         </Col>
                     </Row>
