@@ -13,7 +13,7 @@ class App extends Component {
          <BrowserRouter>
             <div>
               <Route path="/" component={Home} exact />
-              <Route path="/share/:id" component={Share} />
+              <Route path="/share/:name" component={Share} />
             </div>
            
          </BrowserRouter>

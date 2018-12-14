@@ -29,17 +29,34 @@
     margin-top: 20px;
 }
 
-.share-link-group label {
+.copy-wrapper {
     position: absolute;
-    right: 18px;
-    top: 11px;
+    right: 11px;
+    top: 1px;
+    background: #fff;
+    color: #e65112;
+    padding: 11px 12px;
     font-size: 14px;
-    font-weight: 600;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-align: left;
+}
+
+span.copy-link {
+    cursor: pointer;
+}
+
+span.copied-link {
+    position: absolute;
+    left: 5px;
+    background: #fff;
+    padding: 0px 25px;
 }
 
 .share-link-group input {
     text-align: center;
-    padding: 22px 0px;
+    padding: 22px 10px;
+    font-size: 13px
 }
 
 .share-link-group input:focus {
@@ -47,18 +64,19 @@
     box-shadow: none;
 }
 
-
-.social-share ul {
-text-align: center;
-margin-top: 10px;
+.social-share {
+    text-align: center;
 }
 
-.social-share ul li {
+.SocialMediaShareButton {
     display: inline-block;
+    margin: 0px 7px;
+    cursor: pointer;
+    margin-top: 5px;
 }
 
-.social-share ul li img {
-    max-width: 75%;
+.SocialMediaShareButton:focus {
+    outline: 0;
 }
 
 /* Share Banner Component End */
@@ -69,7 +87,7 @@ margin-top: 10px;
     margin-top: 55px;
 }
 
-.share-message-container{
+.share-message-container {
     background: #fff;
     box-shadow: 5px 5px 26px 0 rgba(0,0,0,0.12);
     border: 1px solid #7B1FA2;
@@ -77,11 +95,61 @@ margin-top: 10px;
     border-bottom: 1px solid #D95130;
     border-right: 1px solid #A5356E;
     margin-bottom: 15px;
+    position: relative;
 }
 
 .share-message-inner {
-    padding: 10%;
+    padding: 13% 10%;
 }
+
+.decor {
+   display: none;
+}
+@media (min-width: 992px) {
+    .decor {
+        opacity: 0.6;
+        display: block;
+    }
+
+    .share-message-container img {
+        position: absolute;
+    }
+    
+    img.purp-oval {
+        top: 20px;
+        left: 26px;
+        opacity: 0.6;
+        animation: pop 1.45s ease-out alternate ;
+    }
+    
+    img.purp-line {
+        top: 32px;
+        right: 21px;
+        opacity: 0.6;
+        animation: pop 1.45s ease-out alternate;
+    }
+    
+    img.gold-oval {
+        bottom: 21px;
+        right: 33px;
+        opacity: 0.6;
+        animation: pop 1.45s ease-out alternate;
+    }
+    
+    img.aqua-line {
+        bottom: 28px;
+        left: 30px;
+        opacity: 0.6; 
+        animation: pop 1.45s ease-out alternate;
+    }
+}
+
+
+@keyframes pop {
+    0%   {transform: scale(0.5); opacity: 0;}
+    100% {transform: scale(1); opacity: 0.6;}
+}
+
 
 .share-message-inner p {
     font-size: 2em;
@@ -108,6 +176,9 @@ margin-top: 10px;
     font-size: 1.5em;
 }
 
+
+
+
 .return-favor {
     display: block;
     margin: 0 auto;
@@ -123,8 +194,16 @@ margin-top: 10px;
     border-radius: 30px;
 }
 
+
 .btn-ghost:hover {
-    background: none;
-    color: #7B1FA2;
+    background: #7B1FA2;
+    color: #fff;
+}
+a {
+    transition: all .30s ease-in;
+}
+a.return-link:hover {
+    color: #fff;
+    text-decoration: none;
 }
 

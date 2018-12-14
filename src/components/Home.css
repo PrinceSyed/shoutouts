@@ -49,7 +49,13 @@
     color: #fff;
     padding: 15px 70px;
     border-radius: 30px;
+    transition: all .30s ease-in;
   }
+
+  button.btn.btn-main:hover {
+    background: #a720e0;
+  }
+
 
   button.btn.btn-main a {
     color: #fff;
@@ -69,18 +75,18 @@
     
 /* Slack Section Styles  */
 
-.join-slack {
+.product-update {
     margin-top: 60px;
   }
   
-  .slack-container {
+  .product-update-container {
     background-color: #fff;
     box-shadow: 0 4px 8px 2px rgba(0,0,0,0.13);
     padding: 30px;
   }
   
   @media (min-width: 576px) { 
-    .slack-container {
+    .product-update-container  {
        border-radius: 100px;
        margin-top: 100px;
        padding: 1.5% 1% 1% 10%;
@@ -88,22 +94,24 @@
      }
     
   
-  .slack-container p {
+  .product-update-container  p {
     margin-bottom: 5px;
+    margin-right: 5%;
   }
   
-  .slack-container p a {
+  .product-update-container p a {
     color: #7B1FA2;
     font-size: 1.1em;
   }
   
   
-   img.slack-img {
-     margin: 10px 10px 0px -15px;
+   img.ph-img {
+    margin: 2px 10px 0px -15px;
+    max-width: 60px;
    }
   
    @media (min-width: 576px) {
-  img.slack-img {
+    img.ph-img {
     margin: 14px 0px 0px -30px;
   }
   }

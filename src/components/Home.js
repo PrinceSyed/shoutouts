@@ -1,10 +1,14 @@
 import React, { Component } from 'react';
 import logo from '../assets/img/shoutouts-logo.svg';
-import slack from '../assets/img/slack.svg';
+import phunt from '../assets/img/ph-logo.png';
+import Footer from './Footer';
+import twitterIcon from '../assets/img/twitter-icon.svg';
+import linkedinIcon from '../assets/img/linkedIn-icon.svg';
 import { Container, Row, Col, Button, Form, FormGroup, Label, Input, FormFeedback, FormText } from 'reactstrap';
 import './Home.css';
-import { Link } from 'react-router-dom'
+import { Link } from 'react-router-dom';
 import axios from 'axios';
+
 
 class Home extends Component {
   constructor(props) {
@@ -13,7 +17,7 @@ class Home extends Component {
       userName:'',
       recieverName:'',
       messsage:'',
-      id:''
+      name:''
     };
   }
   onChange = (e) => {
@@ -23,11 +27,11 @@ class Home extends Component {
     e.preventDefault();
         // get our form data out of state
     const { userName, recieverName, messsage } = this.state;
-    axios.post('https://shoutouts-3cdba.firebaseapp.com/api/v1/users',{ userName, recieverName, messsage})
+    axios.post('https://shoutoutz-de4fc.firebaseio.com/usrs/messages.json',{ userName, recieverName, messsage})
         .then(res => {
              // alert(JSON.stringify(res));
               //alert(res.data.id);
-             window.location = "/share/"+res.data.id;
+             window.location = "/share/"+res.data.name;
           
          }) .catch(function (error) {
            
@@ -63,7 +67,7 @@ class Home extends Component {
                     </FormGroup>
       
                     <FormGroup>
-                        <Label for="recieverName"> Wants to give a shoutout to </Label>
+                        <Label for="recieverName"> Want to give a shoutout to </Label>
                         <Input type="text" name="recieverName" id="recieverName" placeholder="Recepient’s name"  onChange={this.onChange} required/>
                     </FormGroup>
       
@@ -72,7 +76,7 @@ class Home extends Component {
                         <Input type="text" name="messsage" id="message" placeholder="eg. being an awesome friend"  onChange={this.onChange} required/>
                     </FormGroup>
       
-                    <Button className="btn-main" type="submit">Generate Links</Button>
+                    <Button className="btn-main" type="submit">Generate Link</Button>
 
 
       
@@ -82,31 +86,23 @@ class Home extends Component {
               </Container>
             </div>
       
-            <div className="join-slack">
-              <Container className="slack-container">
+            <div className="product-update">
+              <Container className="product-update-container">
                   <Row>
                     <Col sm="1" xs="2">
-                    <img src={slack} className="slack-img" alt="Shout Outs Slack" />
+                    <img src={phunt} className="ph-img" alt="Shout Outs Product Hunt" />
                     </Col>
                     <Col sm="11" xs="10">
-                      <h3> Join our slack community! </h3>
+                      <h3> Product updates and feedback </h3>
                       
-                      <p> Have any feedback or questions? Want to discuss ideas? Come hang out with us on Slack! </p>
-                      <p> <a rel="noopener noreferrer" href="https://join.slack.com/t/shoutouts-app/shared_invite/enQtNDQ5NzUxMDQyNTMwLWQzOTc2Y2QwMDFiY2EyYWI0MzZlOGZjMDE3MTAzY2QwYWM4MzU2ODdmYjk0MmNiNTliY2NmZGJhNTIzYmM0ZDM" target="_blank"> Join Shoutouts in Slack </a> </p>
+                      <p> Visit the Shoutout Product Hunt page to provide feedback, report bugs, and stay current with product updates.    </p>
+                      <p> <a rel="noopener noreferrer" href="https://www.producthunt.com/posts/shout-outs" target="_blank"> View on Product Hunt </a> </p>
                     </Col>
                   </Row>
                 </Container>
             </div>
       
-            <div className="footer">
-              <Container>
-                  <Row>
-                    <Col sm="12">
-                      <p> Made with <span aria-label="Heart Emoji" role="img">🧡 </span> by <a rel="noopener noreferrer" href="https://www.syedibrahim.me" target="_blank">  Syed Ibrahim </a> </p>
-                    </Col>
-                  </Row>
-                </Container>
-            </div>
+          <Footer/>
       
       
       
