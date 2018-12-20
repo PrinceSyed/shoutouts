@@ -8,6 +8,7 @@ import { Container, Row, Col, Button, Form, FormGroup, Label, Input, FormFeedbac
 import './Home.css';
 import { Link } from 'react-router-dom';
 import axios from 'axios';
+import Typed from 'react-typed';
 
 
 class Home extends Component {
@@ -73,7 +74,17 @@ class Home extends Component {
       
                     <FormGroup>
                         <Label for="message"> For </Label>
-                        <Input type="text" name="messsage" id="message" placeholder="eg. being an awesome friend"  onChange={this.onChange} required/>
+                        <Typed 
+                        strings={[
+                            'Always making me smile',
+                            'Being an awesome friend',                            
+                            'The little things']}
+                            typeSpeed={40}
+                            backSpeed={50} 
+                            attr="placeholder"
+                            loop >
+                            <input type="text" className="form-control" name="messsage" id="message" placeholder=""   onChange={this.onChange} required/>
+                        </Typed>
                     </FormGroup>
       
                     <Button className="btn-main" type="submit">Generate Link</Button>
@@ -93,10 +104,10 @@ class Home extends Component {
                     <img src={phunt} className="ph-img" alt="Shout Outs Product Hunt" />
                     </Col>
                     <Col sm="11" xs="10">
-                      <h3> Product updates and feedback </h3>
+                      <h3> Product Updates </h3>
                       
-                      <p> Visit the Shoutout Product Hunt page to provide feedback, report bugs, and stay current with product updates.    </p>
-                      <p> <a rel="noopener noreferrer" href="https://www.producthunt.com/posts/shout-outs" target="_blank"> View on Product Hunt </a> </p>
+                      <p> Checkout Shoutouts on Product Hunt and get early access to new features.    </p>
+                      <p> <a rel="noopener noreferrer" href="https://www.producthunt.com/upcoming/shout-outs/" target="_blank"> View on Product Hunt </a> </p>
                     </Col>
                   </Row>
                 </Container>
